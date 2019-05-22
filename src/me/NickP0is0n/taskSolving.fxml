@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.NickP0is0n.TaskSolvingController">
+   <children>
+      <AnchorPane prefHeight="634.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="taskDescription" editable="false" layoutX="154.0" layoutY="33.0" prefHeight="88.0" prefWidth="425.0" />
+            <Text layoutX="23.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Умова задачі:" />
+            <Text layoutX="23.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Приклад тестів:" />
+            <TextArea fx:id="inputData" editable="false" layoutX="154.0" layoutY="165.0" prefHeight="88.0" prefWidth="175.0" />
+            <TextArea fx:id="outputData" editable="false" layoutX="403.0" layoutY="165.0" prefHeight="88.0" prefWidth="175.0" />
+            <Text layoutX="154.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вхідні дані" />
+            <Text layoutX="403.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вихідні дані" />
+            <TextArea fx:id="codeEdit" layoutX="154.0" layoutY="278.0" prefHeight="270.0" prefWidth="425.0" />
+            <Text layoutX="23.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Код для розв'язку:" />
+            <Button layoutX="193.0" layoutY="555.0" mnemonicParsing="false" onAction="#sendCode" prefHeight="38.0" prefWidth="215.0" text="Відправити на перевірку" />
+            <Button layoutX="23.0" layoutY="499.0" mnemonicParsing="false" onAction="#importFile" prefHeight="49.0" prefWidth="119.0" text="Імпортувати з файлу" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

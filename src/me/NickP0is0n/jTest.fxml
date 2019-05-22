@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.NickP0is0n.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button layoutX="48.0" layoutY="56.0" mnemonicParsing="false" onAction="#onOpenBtn" prefHeight="48.0" prefWidth="219.0" text="Відкрити файл завдань" />
+            <Button layoutX="47.0" layoutY="124.0" mnemonicParsing="false" onAction="#onTutorBtn" prefHeight="48.0" prefWidth="219.0" text="Навчання" />
+            <Button layoutX="46.0" layoutY="215.0" mnemonicParsing="false" onAction="#onAboutBtn" prefHeight="48.0" prefWidth="219.0" text="Про програму" />
+            <Button layoutX="45.0" layoutY="283.0" mnemonicParsing="false" onAction="#onExitBtn" prefHeight="48.0" prefWidth="219.0" text="Вийти" />
+            <Text layoutX="344.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="jTest Student">
+               <font>
+                  <Font name="Lato Black" size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="538.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="v1.0.0" />
+            <TextField fx:id="nameField" layoutX="388.0" layoutY="91.0" prefHeight="27.0" prefWidth="219.0" />
+            <TextField fx:id="SurnameField" layoutX="388.0" layoutY="135.0" prefHeight="27.0" prefWidth="219.0" />
+            <TextField fx:id="gradeField" layoutX="388.0" layoutY="176.0" prefHeight="27.0" prefWidth="219.0" />
+            <Text layoutX="350.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ім'я" />
+            <Text layoutX="313.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Прізвище" />
+            <Text layoutX="337.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Клас" />
+            <Text layoutX="362.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пароль (якщо завдання зашифровані)" />
+            <PasswordField fx:id="passField" layoutX="381.0" layoutY="307.0" prefHeight="27.0" prefWidth="219.0" />
+            <ImageView fitHeight="76.0" fitWidth="101.0" layoutX="539.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/logo.png" />
+               </image>
+            </ImageView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
