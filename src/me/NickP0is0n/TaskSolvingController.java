@@ -106,7 +106,7 @@ public class TaskSolvingController {
     void showAlert(String text, Alert.AlertType type)
     {
         Alert error = new Alert(type); //Создание окна ошибки
-        error.setTitle("Повідомлення");
+        error.setTitle("Information");
         error.setContentText(text);
         error.showAndWait();
     }

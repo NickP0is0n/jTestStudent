@@ -59,11 +59,11 @@ public class Controller {
 
     @FXML
     void onOpenBtn(ActionEvent event) throws IOException {
-        if (nameField.getText().isEmpty() || SurnameField.getText().isEmpty() || gradeField.getText().isEmpty()) showError("Ви ввели не всі необхідні дані. Будь-ласка, заповніть всі поля і спробуйте ще раз!"); //защита от дурака
+        if (nameField.getText().isEmpty() || SurnameField.getText().isEmpty() || gradeField.getText().isEmpty()) showError("You haven't filled all the fields. Please fill them and try again!"); //защита от дурака
         else {
             FileChooser chooser = new FileChooser(); //диалог открытия
-            chooser.setTitle("Оберіть файл із завданнями");
-            chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Файли завдань (.jt)", "*.jt")); //фильтр файлов
+            chooser.setTitle("Choose task set file");
+            chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Task set files (.jt)", "*.jt")); //фильтр файлов
             File taskFile = chooser.showOpenDialog(new Stage()); //показ диалога на отдельной сцене
             if(taskFile != null)
             {
@@ -73,18 +73,18 @@ public class Controller {
                     selectedTaskSet = (TaskSet) ois.readObject();
                 }
                 catch(Exception ex){
-                    showError("Виникла помилка при читанні файлу!");
+                    showError("File reading error!");
                 }
                 if(selectedTaskSet.isPasswordProtected() && !selectedTaskSet.getPassword().equals(passField.getText()))
                 {
-                    showError("Цей файл завдань зашифровано паролем. Введений пароль невірний.");
+                    showError("This file encrypted with password. Entered password is incorrect!");
                 }
                 else
                 {
                     FXMLLoader loader = Main.makeLoader("taskSelection.fxml");
                     currentStudent = new Student(nameField.getText(), SurnameField.getText(), gradeField.getText());
                     currentStudent.setStartTime(new Date());
-                    Stage stage = Main.startStage(loader, "Вибір завдання", 574, 172, false);
+                    Stage stage = Main.startStage(loader, "Choose task", 574, 172, false);
                     TaskSwitchController controller = loader.getController();
                     controller.setCurrentTaskSet(selectedTaskSet, stage);
                     stage.show();
@@ -120,7 +120,7 @@ public class Controller {
     void showError(String text)
     {
         Alert error = new Alert(Alert.AlertType.ERROR); //Создание окна ошибки
-        error.setTitle("Помилка");
+        error.setTitle("Error");
         error.setContentText(text);
         error.showAndWait();
     }
