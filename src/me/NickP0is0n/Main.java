@@ -19,10 +19,10 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("jTest.fxml"));
         new JMetro(JMetro.Style.LIGHT).applyTheme(root);
         primaryStage.getIcons().add(new Image(new File("resources/logo.png").toURI().toString()));
-        if (System.getProperty("os.name").equals("Mac OS X"))com.apple.eawt.Application.getApplication().setDockIconImage(new ImageIcon("resources/logo.png").getImage()); //для иконки в доке macOS
         primaryStage.setTitle("jTest Student");
         primaryStage.setScene(new Scene(root, 640, 400));
         primaryStage.setResizable(false);
+        if (System.getProperty("os.name").equals("Mac OS X")) com.apple.eawt.Application.getApplication().setDockIconImage(new ImageIcon("resources/logo.png").getImage());
         primaryStage.show();
     }
 
