@@ -43,7 +43,7 @@ public class Controller {
 
     @FXML
     void onAboutBtn(ActionEvent event) {
-        Alert aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "About", "jTest Student", "1.1 Developer branch build from 22.05.2019\n\n" +
+        Alert aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "About", "jTest Student", "1.1 Developer branch build from 23.05.2019\n\n" +
                 "jTest Student is a jTest client module that allows students to solve sets of tasks created using jTest Teacher app.\n\n"+
                 "jTest Student is a part of jTest software package.\n"+
                 "Source code licensed under BSD-3 Clause license. Feel free to use/copy/modify this package as long as you specifying the name of the author.\n" +
