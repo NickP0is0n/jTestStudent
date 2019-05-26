@@ -75,6 +75,7 @@ public class Controller {
                 catch(Exception ex){
                     showError("File reading error!");
                 }
+                assert selectedTaskSet != null;
                 if(selectedTaskSet.isPasswordProtected() && !selectedTaskSet.getPassword().equals(passField.getText()))
                 {
                     showError("This file encrypted with password. Entered password is incorrect!");
@@ -118,7 +119,7 @@ public class Controller {
         aboutAlert.showAndWait();
     }
 
-    void showError(String text)
+    private void showError(String text)
     {
         Alert error = new Alert(Alert.AlertType.ERROR); //Создание окна ошибки
         error.setTitle("Error");
