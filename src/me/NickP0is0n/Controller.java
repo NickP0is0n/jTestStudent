@@ -96,24 +96,25 @@ public class Controller {
     @FXML
     void onTutorBtn(ActionEvent event) {
         Alert aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "Tutorial", "How to use jTest",
-                "У цій програмі ви маєте можливість пройти тестування з інформатики, яке було підготовано вашим вчителем.");
+                "In this program you can solve task sets of computer science.");
         aboutAlert.showAndWait();
         aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "Tutorial", "How to use jTest",
-                "У головному вікні програми ви маєте ввести своє ім'я, прізвище, клас. Якщо ваш вчитель надав вам файл завдань (з розширенням .jt), захищений паролем, то ви маєте його ввести у поле.");
+                "In the main window of the program you have to enter your name, surname, class. If you have a task file (with .jt extension) that is password protected, you must enter it in the appropriate field.");
         aboutAlert.showAndWait();
         aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "Tutorial", "How to use jTest",
-                "Коли ви ввели всі потрібні дані, потрібно натиснути на кнопку 'Відкрити файл завдань' і обрати файл, який підготував ваш вчитель. Після чого вам відкриється вікно вибору завдань.");
+                "When you have entered all the necessary data, you need to click on the 'Open Task File' button and select the desired file. After that you will see a window where you can choose a task.");
         aboutAlert.showAndWait();
         aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "Tutorial", "How to use jTest",
                 "Після вибору завдання вам відкриється вікно його розв'язання. ЗВЕРНІТЬ УВАГУ, що відкрити завдання ви можете лише 1 раз! Після цього воно буде заблоковане.");
         aboutAlert.showAndWait();
         aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "Tutorial", "How to use jTest",
-                "Щоб програма успішно перевірялась і правильно працювала, потрібно дотримуватись деяких правил:\n\n" +
-                        "1. Ви маєте читати дані з файлу input.txt, а виводити в файл output.txt\n" +
-                        "2. Не забувати про використання import та обробку виключень, інакше програма може не запуститися.");
+                "In order for the program to be successfully tested and work properly, some rules must be followed:\n\n" +
+                        "1. You must read data from the input.txt file, and write output to the output.txt file\n" +
+                        "2. Do not forget about using import and exception handling, otherwise the program may not start.\n"+
+                        "3. Your solution must contain exactly one public class named Main.");
         aboutAlert.showAndWait();
         aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "Tutorial", "How to use jTest",
-                "Коли ви закінчили виконання роботи, натисніть 'Здати роботу', щоб зберегти результат.");
+                "When you have finished your test, press 'Submit solution' to save the result.");
         aboutAlert.showAndWait();
     }
 

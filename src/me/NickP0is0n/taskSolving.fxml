@@ -19,7 +19,7 @@
             <Text layoutX="403.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output data" />
             <TextArea fx:id="codeEdit" layoutX="154.0" layoutY="278.0" prefHeight="270.0" prefWidth="425.0" />
             <Text layoutX="51.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solution code:" />
-            <Button layoutX="193.0" layoutY="555.0" mnemonicParsing="false" onAction="#sendCode" prefHeight="38.0" prefWidth="215.0" text="Send solution" />
+            <Button layoutX="193.0" layoutY="555.0" mnemonicParsing="false" onAction="#sendCode" prefHeight="38.0" prefWidth="215.0" text="Submit solution" />
             <Button layoutX="23.0" layoutY="499.0" mnemonicParsing="false" onAction="#importFile" prefHeight="49.0" prefWidth="119.0" text="Import from file" textAlignment="CENTER" wrapText="true" />
          </children>
       </AnchorPane>
