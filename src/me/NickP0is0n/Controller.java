@@ -105,7 +105,7 @@ public class Controller {
                 "When you have entered all the necessary data, you need to click on the 'Open Task File' button and select the desired file. After that you will see a window where you can choose a task.");
         aboutAlert.showAndWait();
         aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "Tutorial", "How to use jTest",
-                "Після вибору завдання вам відкриється вікно його розв'язання. ЗВЕРНІТЬ УВАГУ, що відкрити завдання ви можете лише 1 раз! Після цього воно буде заблоковане.");
+                "After choosing a task, you will see a window to solve it. PLEASE BE AWARE that you can open the task only once! After that it will be blocked.");
         aboutAlert.showAndWait();
         aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "Tutorial", "How to use jTest",
                 "In order for the program to be successfully tested and work properly, some rules must be followed:\n\n" +
