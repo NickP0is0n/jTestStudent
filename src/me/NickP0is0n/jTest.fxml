@@ -15,7 +15,7 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.NickP0is0n.Controller">
   <children>
-      <MenuBar maxWidth="1.7976931348623157E308" prefHeight="7.0" prefWidth="640.0">
+      <MenuBar maxWidth="1.7976931348623157E308" prefHeight="7.0" prefWidth="640.0" style="-fx-background-color: CCCCCC;">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -29,7 +29,7 @@
           </Menu>
         </menus>
       </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: FFFFFF;" VBox.vgrow="ALWAYS">
       <children>
             <Button layoutX="48.0" layoutY="56.0" mnemonicParsing="false" onAction="#onOpenBtn" prefHeight="48.0" prefWidth="219.0" text="Open task set file" />
             <Button layoutX="48.0" layoutY="283.0" mnemonicParsing="false" onAction="#onTutorBtn" prefHeight="48.0" prefWidth="219.0" text="Tutorial" />
