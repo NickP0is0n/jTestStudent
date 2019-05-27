@@ -8,7 +8,7 @@
 
 <VBox prefHeight="172.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.NickP0is0n.TaskSwitchController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="582.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="582.0" style="-fx-background-color: FFFFFF;" VBox.vgrow="ALWAYS">
          <children>
             <Text layoutX="65.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose task:" />
             <ChoiceBox fx:id="taskSelector" layoutX="169.0" layoutY="24.0" prefHeight="27.0" prefWidth="385.0" />
