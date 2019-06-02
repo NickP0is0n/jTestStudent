@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -48,7 +49,7 @@ public class Controller {
                 "jTest Student is a part of jTest software package.\n"+
                 "Source code licensed under BSD-3 Clause license. Feel free to use/copy/modify this package as long as you specifying the name of the author.\n" +
                 "Copyright (c) 2019, Nickolay Chaykovskyi All rights reserved.");//Создание окна
-        aboutAlert.setGraphic(new ImageView(new File("resources/logo.png").toURI().toString()));
+        aboutAlert.setGraphic(new ImageView(new Image(Controller.class.getClassLoader().getResourceAsStream("logo.png"))));
         aboutAlert.showAndWait();
     }
 
