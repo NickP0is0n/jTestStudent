@@ -1,56 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.NickP0is0n.Controller">
+<VBox prefHeight="379.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.NickP0is0n.Controller">
   <children>
-      <MenuBar maxWidth="1.7976931348623157E308" prefHeight="7.0" prefWidth="640.0" style="-fx-background-color: CCCCCC;">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#onExitBtn" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#onAboutBtn" text="About jTest Student" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: FFFFFF;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="763.0" style="-fx-background-color: FFFFFF;" VBox.vgrow="ALWAYS">
       <children>
-            <Button layoutX="48.0" layoutY="56.0" mnemonicParsing="false" onAction="#onOpenBtn" prefHeight="48.0" prefWidth="219.0" text="Open task set file" />
-            <Button layoutX="48.0" layoutY="283.0" mnemonicParsing="false" onAction="#onTutorBtn" prefHeight="48.0" prefWidth="219.0" text="Tutorial" />
-            <Text layoutX="344.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="jTest Student">
+            <Button contentDisplay="TOP" layoutX="468.0" layoutY="177.0" mnemonicParsing="false" onAction="#onOpenBtn" prefHeight="29.0" prefWidth="219.0" text="Open task set file" />
+            <Button layoutX="468.0" layoutY="219.0" mnemonicParsing="false" onAction="#onTutorBtn" prefHeight="29.0" prefWidth="219.0" text="Tutorial" />
+            <Text layoutX="493.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="jTest Student">
                <font>
-                  <Font name="Lato Black" size="29.0" />
+                  <Font name="Helvetica" size="29.0" />
                </font>
             </Text>
-            <TextField fx:id="nameField" layoutX="388.0" layoutY="91.0" prefHeight="27.0" prefWidth="219.0" />
-            <TextField fx:id="SurnameField" layoutX="388.0" layoutY="135.0" prefHeight="27.0" prefWidth="219.0" />
-            <TextField fx:id="gradeField" layoutX="388.0" layoutY="176.0" prefHeight="27.0" prefWidth="219.0" />
-            <Text layoutX="344.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
-            <Text layoutX="325.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" />
-            <Text layoutX="176.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional info (grade/group etc.)" />
-            <Text layoutX="383.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password (for encrypted task sets)" />
-            <PasswordField fx:id="passField" layoutX="381.0" layoutY="307.0" prefHeight="27.0" prefWidth="219.0" />
-            <ImageView fitHeight="76.0" fitWidth="101.0" layoutX="539.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="nameField" layoutX="125.0" layoutY="82.0" prefHeight="27.0" prefWidth="219.0" />
+            <TextField fx:id="SurnameField" layoutX="125.0" layoutY="123.0" prefHeight="27.0" prefWidth="219.0" />
+            <TextField fx:id="gradeField" layoutX="125.0" layoutY="164.0" prefHeight="27.0" prefWidth="219.0" />
+            <Text layoutX="26.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <Text layoutX="26.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" />
+            <Text layoutX="26.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional info" />
+            <Text layoutX="127.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password (for encrypted task sets)" />
+            <PasswordField fx:id="passField" layoutX="125.0" layoutY="266.0" prefHeight="27.0" prefWidth="219.0" />
+            <ImageView fitHeight="76.0" fitWidth="101.0" layoutX="536.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo.png" />
                </image>
             </ImageView>
+            <Line endX="-12.0" endY="354.0" layoutX="421.0" layoutY="24.0" startX="-12.0" startY="-25.0" strokeWidth="0.1" />
+            <Button layoutX="468.0" layoutY="261.0" mnemonicParsing="false" onAction="#onAboutBtn" prefHeight="29.0" prefWidth="219.0" text="About jTest Student" />
+            <Button layoutX="468.0" layoutY="305.0" mnemonicParsing="false" onAction="#onExitBtn" prefHeight="29.0" prefWidth="219.0" text="Close" />
+            <Text layoutX="535.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.1">
+               <font>
+                  <Font name="Helvetica Light" size="17.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>

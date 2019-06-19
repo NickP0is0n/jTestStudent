@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import jfxtras.styles.jmetro8.JMetro;
 
 import java.io.IOException;
@@ -19,8 +20,9 @@ public class Main extends Application {
         new JMetro(JMetro.Style.LIGHT).applyTheme(root);
         primaryStage.getIcons().add(new Image(getClass().getClassLoader().getResourceAsStream("logo.png")));
         primaryStage.setTitle("jTest Student");
-        primaryStage.setScene(new Scene(root, 640, 400));
+        primaryStage.setScene(new Scene(root, 745, 379));
         primaryStage.setResizable(false);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         java.awt.Image logo = SwingFXUtils.fromFXImage(new Image(Main.class.getClassLoader().getResourceAsStream("logo.png")), null);
         if(System.getProperty("os.name").equals("Mac OS X")) com.apple.eawt.Application.getApplication().setDockIconImage(logo); //для иконки в доке macOS
         primaryStage.show();
