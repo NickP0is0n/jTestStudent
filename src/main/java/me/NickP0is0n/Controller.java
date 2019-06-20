@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -43,14 +44,11 @@ public class Controller {
     }
 
     @FXML
-    void onAboutBtn(ActionEvent event) {
-        Alert aboutAlert = makeAlert(Alert.AlertType.INFORMATION, "About", "jTest Student", "Version 1.1 Beta 2\n\n" +
-                "jTest Student is a jTest client module that allows students to solve sets of tasks created using jTest Teacher app.\n\n"+
-                "jTest Student is a part of jTest software package.\n"+
-                "Source code licensed under BSD-3 Clause license. Feel free to use/copy/modify this package as long as you specifying the name of the author.\n" +
-                "Copyright (c) 2019, Nickolay Chaykovskyi All rights reserved.");//Создание окна
-        aboutAlert.setGraphic(new ImageView(new Image(Controller.class.getClassLoader().getResourceAsStream("logo.png"))));
-        aboutAlert.showAndWait();
+    void onAboutBtn(ActionEvent event) throws IOException {
+        FXMLLoader loader = Main.makeLoader("about.fxml");
+        Stage stage = Main.startStage(loader, "About jTest Student", 600, 400, false);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.show();
     }
 
     @FXML

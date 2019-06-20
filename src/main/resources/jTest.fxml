@@ -11,34 +11,30 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="379.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.NickP0is0n.Controller">
+<VBox prefHeight="380.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.NickP0is0n.Controller">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="763.0" style="-fx-background-color: FFFFFF;" VBox.vgrow="ALWAYS">
       <children>
-            <Button contentDisplay="TOP" layoutX="468.0" layoutY="177.0" mnemonicParsing="false" onAction="#onOpenBtn" prefHeight="29.0" prefWidth="219.0" text="Open task set file" />
-            <Button layoutX="468.0" layoutY="219.0" mnemonicParsing="false" onAction="#onTutorBtn" prefHeight="29.0" prefWidth="219.0" text="Tutorial" />
-            <Text layoutX="493.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="jTest Student">
+            <Button contentDisplay="TOP" layoutX="382.0" layoutY="178.0" mnemonicParsing="false" onAction="#onOpenBtn" prefHeight="29.0" prefWidth="219.0" text="Open task set file" />
+            <Button layoutX="382.0" layoutY="220.0" mnemonicParsing="false" onAction="#onTutorBtn" prefHeight="29.0" prefWidth="219.0" text="Tutorial" />
+            <Text layoutX="407.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="jTest Student">
                <font>
                   <Font name="Helvetica" size="29.0" />
                </font>
             </Text>
-            <TextField fx:id="nameField" layoutX="125.0" layoutY="82.0" prefHeight="27.0" prefWidth="219.0" />
-            <TextField fx:id="SurnameField" layoutX="125.0" layoutY="123.0" prefHeight="27.0" prefWidth="219.0" />
-            <TextField fx:id="gradeField" layoutX="125.0" layoutY="164.0" prefHeight="27.0" prefWidth="219.0" />
-            <Text layoutX="26.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
-            <Text layoutX="26.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" />
-            <Text layoutX="26.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Additional info" />
-            <Text layoutX="127.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password (for encrypted task sets)" />
-            <PasswordField fx:id="passField" layoutX="125.0" layoutY="266.0" prefHeight="27.0" prefWidth="219.0" />
-            <ImageView fitHeight="76.0" fitWidth="101.0" layoutX="536.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="nameField" layoutX="37.0" layoutY="82.0" prefHeight="27.0" prefWidth="237.0" promptText="Name" />
+            <TextField fx:id="SurnameField" layoutX="37.0" layoutY="123.0" prefHeight="27.0" prefWidth="237.0" promptText="Surname" AnchorPane.bottomAnchor="231.0" />
+            <TextField fx:id="gradeField" layoutX="37.0" layoutY="164.0" prefHeight="27.0" prefWidth="237.0" promptText="Additional info (grade/group etc.)" />
+            <PasswordField fx:id="passField" layoutX="37.0" layoutY="262.0" prefHeight="27.0" prefWidth="237.0" promptText="Password (for encrypted task sets)" />
+            <ImageView fitHeight="76.0" fitWidth="101.0" layoutX="450.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo.png" />
                </image>
             </ImageView>
-            <Line endX="-12.0" endY="354.0" layoutX="421.0" layoutY="24.0" startX="-12.0" startY="-25.0" strokeWidth="0.1" />
-            <Button layoutX="468.0" layoutY="261.0" mnemonicParsing="false" onAction="#onAboutBtn" prefHeight="29.0" prefWidth="219.0" text="About jTest Student" />
-            <Button layoutX="468.0" layoutY="305.0" mnemonicParsing="false" onAction="#onExitBtn" prefHeight="29.0" prefWidth="219.0" text="Close" />
-            <Text layoutX="535.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.1">
+            <Line endX="-12.0" endY="354.0" layoutX="344.0" layoutY="25.0" startX="-12.0" startY="-25.0" strokeWidth="0.1" />
+            <Button layoutX="382.0" layoutY="262.0" mnemonicParsing="false" onAction="#onAboutBtn" prefHeight="29.0" prefWidth="219.0" text="About jTest Student" />
+            <Button layoutX="382.0" layoutY="306.0" mnemonicParsing="false" onAction="#onExitBtn" prefHeight="29.0" prefWidth="219.0" text="Close" />
+            <Text layoutX="449.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.1">
                <font>
                   <Font name="Helvetica Light" size="17.0" />
                </font>

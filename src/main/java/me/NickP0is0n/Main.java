@@ -20,7 +20,7 @@ public class Main extends Application {
         new JMetro(JMetro.Style.LIGHT).applyTheme(root);
         primaryStage.getIcons().add(new Image(getClass().getClassLoader().getResourceAsStream("logo.png")));
         primaryStage.setTitle("jTest Student");
-        primaryStage.setScene(new Scene(root, 745, 379));
+        primaryStage.setScene(new Scene(root, 649, 380));
         primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.UNDECORATED);
         java.awt.Image logo = SwingFXUtils.fromFXImage(new Image(Main.class.getClassLoader().getResourceAsStream("logo.png")), null);
