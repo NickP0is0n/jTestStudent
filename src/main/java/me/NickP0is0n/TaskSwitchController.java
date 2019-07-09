@@ -48,15 +48,15 @@ public class TaskSwitchController{
         }
         Controller.currentStudent.setFinishTime(new Date());
         FileChooser chooser = new FileChooser(); //діалог збереження
-        chooser.setTitle("Збережіть файл з результатами");
-        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Файли результатів (.jres)", "*.jres")); //фильтр файлов
+        chooser.setTitle("Save the result file");
+        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("jTest result files (.jres)", "*.jres")); //фильтр файлов
         File taskFile = chooser.showSaveDialog(new Stage()); //показ диалога на отдельной сцене
         if (taskFile != null) {
             try {
                 taskFile.createNewFile();
             } catch (IOException e) {
                 e.printStackTrace();
-                showAlert("Виникла помилка при створенні файлу!", Alert.AlertType.ERROR);
+                showAlert("An error occurred while creating a file!", Alert.AlertType.ERROR);
             }
         }
         if (taskFile != null) {
@@ -64,20 +64,20 @@ public class TaskSwitchController{
                 oos.writeObject(Controller.currentStudent);
             } catch (Exception e) {
                 e.printStackTrace();
-                showAlert("Виникла помилка при збереженні файлу!", Alert.AlertType.ERROR);
+                showAlert("An error occurred while saving a file!", Alert.AlertType.ERROR);
             }
-            showAlert("Ваша робота успішно завершена і збережена.", Alert.AlertType.INFORMATION);
+            showAlert("Your work has been successfully completed and saved.", Alert.AlertType.INFORMATION);
             currentStage.close();
         }
     }
 
     @FXML
     void startTask(ActionEvent event) throws IOException {
-        if (isTaskFinished[getSelectedItemIndex(taskSelector.getValue())]) showAlert("Ви вже намагалися виконати це завдання!", Alert.AlertType.ERROR);
+        if (isTaskFinished[getSelectedItemIndex(taskSelector.getValue())]) showAlert("You have already tried to perform this task!", Alert.AlertType.ERROR);
         else
         {
             FXMLLoader loader = Main.makeLoader("taskSolving.fxml");
-            Stage stage = Main.startStage(loader, "Виконання завдання", 600, 634, false);
+            Stage stage = Main.startStage(loader, "Task solving", 600, 634, false);
             TaskSolvingController controller = loader.getController();
             controller.setCurrentTask(currentTaskSet.get(getSelectedItemIndex(taskSelector.getValue())), getSelectedItemIndex(taskSelector.getValue()), stage);
             stage.show();
@@ -105,7 +105,7 @@ public class TaskSwitchController{
     void showAlert(String text, Alert.AlertType type)
     {
         Alert error = new Alert(type); //Создание окна ошибки
-        error.setTitle("Повідомлення");
+        error.setTitle("Information");
         error.setContentText(text);
         error.showAndWait();
     }

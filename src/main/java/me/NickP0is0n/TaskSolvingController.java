@@ -74,17 +74,17 @@ public class TaskSolvingController {
         }
 
         showAlert(new StringBuilder()
-                .append("Завдання успішно перевірено. Пройдено ")
+                .append("The solution has been successfully verified. Passed ")
                 .append(good)
-                .append(" з 5 тестів.").toString(), Alert.AlertType.INFORMATION);
+                .append(" out of 5 tests.").toString(), Alert.AlertType.INFORMATION);
         currentScene.close();
     }
 
     @FXML
     void importFile(ActionEvent event) throws IOException {
         FileChooser chooser = new FileChooser(); //диалог открытия
-        chooser.setTitle("Оберіть файл з кодом");
-        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Файли коду Java (.java)", "*.java")); //фильтр файлов
+        chooser.setTitle("Choose a file with code");
+        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Java source files (.java)", "*.java")); //фильтр файлов
         File taskFile = chooser.showOpenDialog(new Stage()); //показ диалога на отдельной сцене
         if(taskFile != null) codeEdit.setText(readFileToString(taskFile.getPath()));
     }
@@ -106,7 +106,7 @@ public class TaskSolvingController {
     void showAlert(String text, Alert.AlertType type)
     {
         Alert error = new Alert(type); //Создание окна ошибки
-        error.setTitle("Повідомлення");
+        error.setTitle("Information");
         error.setContentText(text);
         error.showAndWait();
     }
