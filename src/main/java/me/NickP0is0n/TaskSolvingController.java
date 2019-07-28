@@ -105,6 +105,7 @@ public class TaskSolvingController {
     void setCurrentTask (Task task, int taskNumber, Stage stage)
     {
         this.currentScene = stage;
+        this.currentScene.setTitle("Task solving: " + task.getTaskName());
         this.taskNumber = taskNumber;
         this.currentTask = task;
         this.taskDescription.setText(task.getTaskDescription());
