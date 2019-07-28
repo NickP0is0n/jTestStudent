@@ -39,6 +39,11 @@ public class TaskSolvingController {
     @FXML
     void sendCode(ActionEvent event) throws InterruptedException, IOException {
         String codeText = codeEdit.getText();
+        if (codeText.isEmpty() && !emptyFieldAttention) {
+            showAlert("Are you sure that you want to send empty code? If yes, click on \"Send solution\" again.", Alert.AlertType.WARNING);
+            emptyFieldAttention = true;
+            return;
+        }
         File codeFile = new File("Main.java");
         codeFile.createNewFile();
         PrintWriter fileWrite = null;
@@ -107,7 +112,7 @@ public class TaskSolvingController {
         this.outputData.setText(task.getTaskOut()[0]);
     }
 
-    void showAlert(String text, Alert.AlertType type)
+    private void showAlert(String text, Alert.AlertType type)
     {
         Alert error = new Alert(type); //Создание окна ошибки
         error.setTitle("Information");
