@@ -32,9 +32,9 @@ public class TaskSwitchController{
     void setCurrentTaskSet(TaskSet currentTaskSet, Stage stage) {
         this.currentTaskSet = currentTaskSet;
         isTaskFinished = new boolean[currentTaskSet.size()];
-        for (boolean i:
+        for (boolean task:
              isTaskFinished) {
-                i = false;
+                task = false;
         }
         updateSelector(0);
         this.currentStage = stage;
