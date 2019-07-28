@@ -8,7 +8,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
@@ -32,8 +31,13 @@ public class TaskSolvingController {
     @FXML
     private TextArea codeEdit;
 
+    private boolean emptyFieldAttention = false;
+
+    private final int CODE_CHECK_TIMEOUT = 1000;
+    private final int MAX_TEST_COUNT = 5;
+
     @FXML
-    void sendCode(ActionEvent event) throws InterruptedException, IOException, FileNotFoundException {
+    void sendCode(ActionEvent event) throws InterruptedException, IOException {
         String codeText = codeEdit.getText();
         File codeFile = new File("Main.java");
         codeFile.createNewFile();
@@ -47,7 +51,7 @@ public class TaskSolvingController {
         p = Runtime.getRuntime().exec("javac Main.java");
         Thread.sleep(3000);
         int good = 0;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < MAX_TEST_COUNT; i++) {
             File inputSim = new File("input.txt");
             inputSim.createNewFile();
             PrintWriter inWriter = null;
@@ -56,7 +60,7 @@ public class TaskSolvingController {
             inWriter.close();
 
             p = Runtime.getRuntime().exec("java Main");
-            Thread.sleep(1000);
+            Thread.sleep(CODE_CHECK_TIMEOUT);
 
             String fileCode = null;
             fileCode = readFileToString("output.txt");
