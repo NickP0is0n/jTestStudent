@@ -1,4 +1,4 @@
-package me.NickP0is0n;
+package me.NickP0is0n.jTestStudent.models;
 
 import java.io.Serializable;
 
@@ -7,6 +7,13 @@ public class Task implements Serializable {
     private String taskName;
     private String taskDescription;
 
+    private String[] taskIn = new String[5];
+    private String[] taskOut = new String[5];
+
+    public Task(String taskName) {
+        this.taskName = taskName;
+    }
+
     public String getTaskDescription() {
         return taskDescription;
     }
@@ -14,13 +21,6 @@ public class Task implements Serializable {
     public Task setTaskDescription(String taskDescription) {
         this.taskDescription = taskDescription;
         return this;
-    }
-
-    private String[] taskIn = new String[5];
-    private String[] taskOut = new String[5];
-
-    public Task(String taskName) {
-        this.taskName = taskName;
     }
 
     public String getTaskName() {

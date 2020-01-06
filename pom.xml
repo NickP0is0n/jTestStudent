@@ -26,7 +26,7 @@
                     <vendor>NickP0is0n</vendor>
                     <appName>jTest Student</appName>
                     <nativeReleaseVersion>1.1.1</nativeReleaseVersion>
-                    <mainClass>me.NickP0is0n.Main</mainClass>
+                    <mainClass>me.NickP0is0n.jTestStudent.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
@@ -36,7 +36,7 @@
         <dependency>
             <groupId>org.jfxtras</groupId>
             <artifactId>jmetro</artifactId>
-            <version>5.4</version>
+            <version>5.3</version>
         </dependency>
     </dependencies>
 

@@ -1,4 +1,4 @@
-package me.NickP0is0n;
+package me.NickP0is0n.jTestStudent.controllers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,6 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import me.NickP0is0n.jTestStudent.models.TaskSet;
+import me.NickP0is0n.jTestStudent.Main;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -29,17 +32,6 @@ public class TaskSwitchController{
     @FXML
     private Button startTaskBtn;
 
-    void setCurrentTaskSet(TaskSet currentTaskSet, Stage stage) {
-        this.currentTaskSet = currentTaskSet;
-        isTaskFinished = new boolean[currentTaskSet.size()];
-        for (boolean task:
-             isTaskFinished) {
-                task = false;
-        }
-        updateSelector(0);
-        this.currentStage = stage;
-    }
-
     @FXML
     void endWork(ActionEvent event) {
         for (int i = 0; i < currentTaskSet.size(); i++)
@@ -47,10 +39,10 @@ public class TaskSwitchController{
             if (!isTaskFinished[i]) Controller.currentStudent.addTask(i, 0);
         }
         Controller.currentStudent.setFinishTime(new Date());
-        FileChooser chooser = new FileChooser(); //діалог збереження
+        FileChooser chooser = new FileChooser();
         chooser.setTitle("Save the result file");
         chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("jTest result files (.jres)", "*.jres")); //фильтр файлов
-        File taskFile = chooser.showSaveDialog(new Stage()); //показ диалога на отдельной сцене
+        File taskFile = chooser.showSaveDialog(new Stage());
         if (taskFile != null) {
             try {
                 taskFile.createNewFile();
@@ -91,6 +83,17 @@ public class TaskSwitchController{
         for (int i = 0; i < currentTaskSet.size(); i++) items.add((i + 1) + ". " + currentTaskSet.get(i).getTaskName());
         taskSelector.setItems(items);
         taskSelector.setValue((selectedItem + 1) + ". " + currentTaskSet.get(selectedItem).getTaskName());
+    }
+
+    void setCurrentTaskSet(TaskSet currentTaskSet, Stage stage) {
+        this.currentTaskSet = currentTaskSet;
+        isTaskFinished = new boolean[currentTaskSet.size()];
+        for (boolean task:
+                isTaskFinished) {
+            task = false;
+        }
+        updateSelector(0);
+        this.currentStage = stage;
     }
 
     int getSelectedItemIndex(String item)

@@ -1,4 +1,4 @@
-package me.NickP0is0n;
+package me.NickP0is0n.jTestStudent.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;

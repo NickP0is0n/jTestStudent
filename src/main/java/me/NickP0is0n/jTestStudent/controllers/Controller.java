@@ -1,4 +1,4 @@
-package me.NickP0is0n;
+package me.NickP0is0n.jTestStudent.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,11 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import me.NickP0is0n.jTestStudent.Main;
+import me.NickP0is0n.jTestStudent.models.Student;
+import me.NickP0is0n.jTestStudent.models.TaskSet;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -72,6 +73,7 @@ public class Controller {
                     selectedTaskSet = (TaskSet) ois.readObject();
                 }
                 catch(Exception ex){
+                    ex.printStackTrace();
                     showError("File reading error!");
                 }
                 assert selectedTaskSet != null;

@@ -1,4 +1,4 @@
-package me.NickP0is0n;
+package me.NickP0is0n.jTestStudent;
 
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
