@@ -39,26 +39,10 @@ public class TaskSwitchController{
             if (!isTaskFinished[i]) Controller.currentStudent.addTask(i, 0);
         }
         Controller.currentStudent.setFinishTime(new Date());
-        FileChooser chooser = new FileChooser();
-        chooser.setTitle("Save the result file");
-        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("jTest result files (.jres)", "*.jres")); //фильтр файлов
-        File taskFile = chooser.showSaveDialog(new Stage());
+        File taskFile = getFileFromSaveDialog();
         if (taskFile != null) {
-            try {
-                taskFile.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-                showAlert("An error occurred while creating a file!", Alert.AlertType.ERROR);
-            }
-        }
-        if (taskFile != null) {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(taskFile))) {
-                oos.writeObject(Controller.currentStudent);
-            } catch (Exception e) {
-                e.printStackTrace();
-                showAlert("An error occurred while saving a file!", Alert.AlertType.ERROR);
-            }
-            showAlert("Your work has been successfully completed and saved.", Alert.AlertType.INFORMATION);
+
+            saveWork(taskFile);
             currentStage.close();
         }
     }
@@ -75,6 +59,32 @@ public class TaskSwitchController{
             stage.show();
             isTaskFinished[getSelectedItemIndex(taskSelector.getValue())] = true;
         }
+    }
+
+
+
+    private File getFileFromSaveDialog() {
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Save the result file");
+        chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("jTest result files (.jres)", "*.jres")); //фильтр файлов
+        File saveFile = chooser.showSaveDialog(new Stage());
+        return saveFile;
+    }
+
+    private void saveWork(File taskFile) {
+        try {
+            taskFile.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("An error occurred while creating a file!", Alert.AlertType.ERROR);
+        }
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(taskFile))) {
+            oos.writeObject(Controller.currentStudent);
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert("An error occurred while saving a file!", Alert.AlertType.ERROR);
+        }
+        showAlert("Your work has been successfully completed and saved.", Alert.AlertType.INFORMATION);
     }
 
     void updateSelector(int selectedItem)

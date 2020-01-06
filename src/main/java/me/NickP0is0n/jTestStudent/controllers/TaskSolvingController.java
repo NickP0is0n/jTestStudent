@@ -8,8 +8,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import me.NickP0is0n.jTestStudent.models.Task;
 import me.NickP0is0n.jTestStudent.service.FileUtils;
-import me.NickP0is0n.jTestStudent.service.InternalApplication;
-import me.NickP0is0n.jTestStudent.service.TestingEnvironment;
+import me.NickP0is0n.jTestStudent.models.InternalApplication;
+import me.NickP0is0n.jTestStudent.models.TestingEnvironment;
 
 import java.io.File;
 import java.io.IOException;

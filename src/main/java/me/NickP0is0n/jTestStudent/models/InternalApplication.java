@@ -1,6 +1,4 @@
-package me.NickP0is0n.jTestStudent.service;
-
-import me.NickP0is0n.jTestStudent.controllers.TaskSolvingController;
+package me.NickP0is0n.jTestStudent.models;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,10 +1,10 @@
-package me.NickP0is0n.jTestStudent.service;
+package me.NickP0is0n.jTestStudent.models;
+
+import me.NickP0is0n.jTestStudent.service.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class TestingEnvironment {
 
